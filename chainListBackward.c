@@ -49,5 +49,15 @@ int main()
 		pt_current = pt_current->next;
 	}
 
+	// On se place à la fin (car pt etait plus loin que la dernière case) //
+  pt_current = pt_after;
+
+	// On affiche dans l'autre sens //
+	while(pt_current != NULL)
+	{
+		printf("Valeur : %d \n", pt_current->val);
+		pt_current = pt_current->prev;
+	}
+
 	return 0;
 }
